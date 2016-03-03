@@ -78,6 +78,11 @@ class AdHomeCell: UITableViewCell {
         self.addSubview(adChoicesView)
         adChoicesView.updateFrameFromSuperview()
     }
+    
+    func blankCell()
+    {
+        print("show something here")
+    }
 
 }
 
