@@ -75,7 +75,7 @@ extension Chapter {
             
             let swiftyJsonVar = JSON(response.result.value!)
             let chapters = swiftyJsonVar["book"].arrayObject
-            print(chapters)
+//            print(chapters)
 
             var data = [Chapter]()
             
@@ -113,6 +113,47 @@ extension Chapter {
             complate(result: chapter)
             
         }
+    }
+    class func downloadStory (allChapters:[Chapter]) -> Void
+    {
+        let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        // Import many items in a background thread
+        dispatch_async(queue) {
+            
+            autoreleasepool {
+                for (_, element) in allChapters.enumerate() {
+                    
+                    //                 print("Item \(index)")
+                    let chapter: Chapter = element
+                    let API_URL = "http://webtruyen.com/api3/chapter?id=\(chapter.id)"
+                    
+                    Alamofire.request(.GET, API_URL).responseJSON { (response) -> Void in
+                        if (response.result.error != nil){
+                            print(response.result.error?.description)
+                            return
+                        }
+                        
+                        // Get new realm and table since we are in a new thread
+                        let realm = try! Realm()
+                        realm.beginWrite()
+                        
+                        let cachedURLResponse = NSCachedURLResponse(response: response.response!, data: (response.data! as NSData), userInfo: nil, storagePolicy: .Allowed)
+                        NSURLCache.sharedURLCache().storeCachedResponse(cachedURLResponse, forRequest: response.request!)
+                        let swiftyJsonVar = JSON(response.result.value!)
+                        let chapters = swiftyJsonVar["book"][0].object
+                        let chapter: Chapter = Mapper<Chapter>().map(chapters)!
+                        realm.add(chapter,update: true)
+                        
+                        try! realm.commitWrite()
+                        
+                    }
+                    
+                }
+            }
+            
+            
+        }
+        
     }
 }
 

@@ -30,7 +30,7 @@ class ReaderViewController: UIViewController, ControlDelegate, UIGestureRecogniz
         
         
         Chapter.getContent(chapter.id) { (result) -> Void in
-            print(result)
+//            print(result)
             self.content = NSMutableAttributedString.init(string: result.content)
             
             self.htmlText()

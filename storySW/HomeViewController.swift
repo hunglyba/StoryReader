@@ -12,6 +12,7 @@ import SwiftyJSON
 import Kingfisher
 import ObjectMapper
 import Foundation
+import RealmSwift
 
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,FBNativeAdDelegate,AdManageDelegate {
@@ -45,16 +46,58 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.estimatedRowHeight = 300
         tableView.rowHeight          = UITableViewAutomaticDimension
 
-		self.getTableData(currentPage)
+//		self.getTableData(currentPage)
         
-        self.testFbNativeAd()
+
         
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
         print("direct document path \(paths)")
         
+        self.checkConnect()
+        self.getDataFromLocal()
+        
+        
 	}
+    func checkConnect ()
+    {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
+        Reach().monitorReachabilityChanges()
 
+    }
+    
+    func networkStatusChanged(notification: NSNotification) {
+        let userInfo = notification.userInfo
+        print(userInfo)
+    }
+
+    func getDataFromLocal ()
+    {
+        
+       let array = try! Realm().objects(Story)
+        
+        print("data local \(array)")
+//        
+//        self.dataArray.addObjectsFromArray(storys)
+//        self.tableView.reloadData()
+//        
+//        self.dataArray.addObject(array)
+//        self.tableView.reloadData()
+
+           for (_, element) in array.enumerate() {
+            
+            let story: Story = element
+            self.dataArray.addObject(story)
+            
+        }
+        
+        self.tableView.reloadData()
+        
+        
+        
+
+    }
+    
     func testFbNativeAd ()
     {
         print("native ad did init array")
@@ -77,6 +120,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         print("use delegate")
     }
+
     
     // MARK: - Fb NativeAd Delegate
     func nativeAdDidLoad(nativeAd: FBNativeAd) {

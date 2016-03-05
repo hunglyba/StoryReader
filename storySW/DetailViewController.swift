@@ -8,6 +8,7 @@
 
 import UIKit
 import FormatterKit
+import RealmSwift
 
 let kButtonWidth = 40
 let kStepButton = 100
@@ -111,9 +112,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         self.nativeAd = nativeAd
 
-//        let section = NSIndexSet.init(index: 1)
-//        self.tableView.reloadSections(section, withRowAnimation: .Automatic)
-        
     }
     
     func createHeaderFbAd(nativeAd:FBNativeAd)
@@ -189,6 +187,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let cell:DetailCell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! DetailCell
             
             cell.moreButton.addTarget(self, action: "showMore", forControlEvents: .TouchUpInside)
+            cell.downloadButton.addTarget(self,action:"downLoad",forControlEvents:.TouchUpInside)
             
             cell.selectionStyle = .None
             cell.dataDetailCell(self.story, full: self.full)
@@ -213,7 +212,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                
                 let cellData: Chapter
                 
-                if indexPath.row > 7
+                if indexPath.row > 7 && self.haveAd
                 {
                     cellData = self.chapters[indexPath.row - 1]
 
@@ -246,10 +245,21 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func showMore() {
         
-        self.full = !self.full;
+//        self.full = !self.full;
+//        
+//        let indexPath = NSIndexPath.init(forRow: 0, inSection: 0)
+//        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    }
+    
+    func downLoad()
+    {
+        print("down load")
         
-        let indexPath = NSIndexPath.init(forRow: 0, inSection: 0)
-        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        let realm = try! Realm()
+        realm.beginWrite()
+        realm.add(self.story, update: true)
+        try! realm.commitWrite()
+        Chapter.downloadStory(self.chapters)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -272,7 +282,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
              chapter = self.chapters[indexPath.row]
         }
         
-        print("chapter dis select \(chapter)")
+//        print("chapter dis select \(chapter)")
         
 
         let detailVC: ReaderViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("readerVC") as! ReaderViewController

@@ -87,6 +87,7 @@ extension Story  {
             
             let swiftyJsonVar = JSON(responseData.result.value!)
             let stories = swiftyJsonVar["data"].arrayObject
+            
             var data = [Story]()
             for subJson in stories!{
 
@@ -95,6 +96,10 @@ extension Story  {
                 data.append(story)
                 
             }
+            
+            
+            
+            
             complate(result: data)
 
         }

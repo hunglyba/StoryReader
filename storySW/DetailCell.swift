@@ -18,7 +18,7 @@ class DetailCell: UITableViewCell {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
-    
+    @IBOutlet weak var downloadButton: UIButton!
     
     
     override func awakeFromNib() {

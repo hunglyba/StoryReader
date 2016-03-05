@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13007E2B1C896F9A003F6943 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13007E2A1C896F9A003F6943 /* Reach.swift */; };
+		13007E2C1C896F9A003F6943 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13007E2A1C896F9A003F6943 /* Reach.swift */; };
+		13007E2D1C896F9A003F6943 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13007E2A1C896F9A003F6943 /* Reach.swift */; };
 		1345B1871C87D40500F448DB /* AdHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345B1861C87D40500F448DB /* AdHomeCell.swift */; };
 		13851B941C7EA80800CEE0CF /* some_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13851B931C7EA80800CEE0CF /* some_image.jpg */; };
 		13A364B81C7FE5BF00DBB1E3 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A364B71C7FE5BE00DBB1E3 /* FBAudienceNetwork.framework */; };
@@ -63,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13007E2A1C896F9A003F6943 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		1345B1861C87D40500F448DB /* AdHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdHomeCell.swift; sourceTree = "<group>"; };
 		13851B931C7EA80800CEE0CF /* some_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = some_image.jpg; sourceTree = "<group>"; };
 		1387C04544DF704375B822D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				4CC4ED511C4F276A00506F13 /* AppDelegate.swift */,
+				13007E2A1C896F9A003F6943 /* Reach.swift */,
 				4C13DB9E1C5226020021613E /* Model */,
 				4C13DB9D1C5225F00021613E /* Home */,
 				4C34F72E1C5747B7004D4D4C /* Detail */,
@@ -473,6 +478,7 @@
 				4C3FEBD21C5A298800C1C9A9 /* imageColor.swift in Sources */,
 				4CD68C0E1C59B48C00413988 /* ChapterCell.swift in Sources */,
 				4C3FEBD01C5A258800C1C9A9 /* Tabbar.swift in Sources */,
+				13007E2B1C896F9A003F6943 /* Reach.swift in Sources */,
 				4C73871B1C607B540083F105 /* ReaderViewController.swift in Sources */,
 				4CC2E88D1C561769007AC7D8 /* RealmTransform.swift in Sources */,
 				4CC4ED821C4F2F4200506F13 /* HomeCell.swift in Sources */,
@@ -494,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC4ED671C4F276A00506F13 /* storySWTests.swift in Sources */,
+				13007E2C1C896F9A003F6943 /* Reach.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC4ED721C4F276A00506F13 /* storySWUITests.swift in Sources */,
+				13007E2D1C896F9A003F6943 /* Reach.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
