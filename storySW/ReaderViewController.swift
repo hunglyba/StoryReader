@@ -49,7 +49,13 @@ class ReaderViewController: UIViewController, ControlDelegate, UIGestureRecogniz
         self.controlView.alpha = 0.0
         self.view.addSubview(self.controlView)
         
+        self.getContentChapeterLocal()
         
+    }
+    
+    func getContentChapeterLocal ()
+    {
+        print("chapter detail \(self.chapter)")
         
     }
     

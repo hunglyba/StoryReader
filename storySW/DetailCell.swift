@@ -18,7 +18,8 @@ class DetailCell: UITableViewCell {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
-    @IBOutlet weak var downloadButton: UIButton!
+    
+    @IBOutlet weak var downloadButton: GBKUIButtonProgressView!
     
     
     override func awakeFromNib() {
@@ -83,3 +84,8 @@ class DetailCell: UITableViewCell {
     }
 
 }
+
+
+
+
+

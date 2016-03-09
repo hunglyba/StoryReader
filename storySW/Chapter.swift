@@ -15,7 +15,7 @@ import SwiftyJSON
 class Chapter: Object {
     
     dynamic var book: String!
-    dynamic var chapter: String!
+    dynamic var chapter = 0
     dynamic var id: String!
     dynamic var name : String!
     dynamic var story_id: String!
@@ -86,7 +86,7 @@ extension Chapter {
                 
             }
             
-            print(data)
+//            print(data)
 
             complate(result: data)
             
@@ -114,7 +114,7 @@ extension Chapter {
             
         }
     }
-    class func downloadStory (allChapters:[Chapter]) -> Void
+    class func downloadStory (allChapters:NSMutableArray) -> Void
     {
         let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         // Import many items in a background thread
@@ -124,7 +124,7 @@ extension Chapter {
                 for (_, element) in allChapters.enumerate() {
                     
                     //                 print("Item \(index)")
-                    let chapter: Chapter = element
+                    let chapter: Chapter = element as! Chapter
                     let API_URL = "http://webtruyen.com/api3/chapter?id=\(chapter.id)"
                     
                     Alamofire.request(.GET, API_URL).responseJSON { (response) -> Void in

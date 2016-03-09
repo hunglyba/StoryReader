@@ -61,8 +61,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	}
     func checkConnect ()
     {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
-        Reach().monitorReachabilityChanges()
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
+//        Reach().monitorReachabilityChanges()
+
+        print("show connect status")
+        
+        SCLAlertView().showWarning("Warning", subTitle: "Disconnect")
 
     }
     
@@ -73,17 +77,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     func getDataFromLocal ()
     {
+        print("get data from local")
         
        let array = try! Realm().objects(Story)
         
-        print("data local \(array)")
-//        
-//        self.dataArray.addObjectsFromArray(storys)
-//        self.tableView.reloadData()
-//        
-//        self.dataArray.addObject(array)
-//        self.tableView.reloadData()
-
+//        print("data local \(array)")
            for (_, element) in array.enumerate() {
             
             let story: Story = element
@@ -92,10 +90,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         self.tableView.reloadData()
-        
-        
-        
-
     }
     
     func testFbNativeAd ()

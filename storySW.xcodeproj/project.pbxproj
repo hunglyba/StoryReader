@@ -11,11 +11,18 @@
 		13007E2C1C896F9A003F6943 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13007E2A1C896F9A003F6943 /* Reach.swift */; };
 		13007E2D1C896F9A003F6943 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13007E2A1C896F9A003F6943 /* Reach.swift */; };
 		1345B1871C87D40500F448DB /* AdHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345B1861C87D40500F448DB /* AdHomeCell.swift */; };
+		136ED00C1C8D62E8001EFD51 /* GBKUIButtonAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 136ED0051C8D62E8001EFD51 /* GBKUIButtonAnimations.m */; };
+		136ED00D1C8D62E8001EFD51 /* GBKUIButtonProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 136ED0071C8D62E8001EFD51 /* GBKUIButtonProgressView.m */; };
+		136ED00E1C8D62E8001EFD51 /* GBKUIButtonProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 136ED0081C8D62E8001EFD51 /* GBKUIButtonProgressView.xib */; };
+		136ED00F1C8D62E8001EFD51 /* ic_control_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 136ED0091C8D62E8001EFD51 /* ic_control_stop.png */; };
+		136ED0101C8D62E8001EFD51 /* ic_control_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136ED00A1C8D62E8001EFD51 /* ic_control_stop@2x.png */; };
+		136ED0111C8D62E8001EFD51 /* ic_control_stop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136ED00B1C8D62E8001EFD51 /* ic_control_stop@3x.png */; };
 		13851B941C7EA80800CEE0CF /* some_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13851B931C7EA80800CEE0CF /* some_image.jpg */; };
 		13A364B81C7FE5BF00DBB1E3 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A364B71C7FE5BE00DBB1E3 /* FBAudienceNetwork.framework */; };
 		13A364B91C7FE5BF00DBB1E3 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A364B71C7FE5BE00DBB1E3 /* FBAudienceNetwork.framework */; };
 		13A364BA1C7FE5BF00DBB1E3 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A364B71C7FE5BE00DBB1E3 /* FBAudienceNetwork.framework */; };
 		13A364BD1C8031DF00DBB1E3 /* AdManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A364BC1C8031DE00DBB1E3 /* AdManage.swift */; };
+		13D8E9D01C8A90C400D2E727 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8E9CF1C8A90C400D2E727 /* SCLAlertView.swift */; };
 		13FC6EAB1C83E1BE0047E15D /* HeaderFbAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FC6EAA1C83E1BE0047E15D /* HeaderFbAd.swift */; };
 		13FC6EAD1C83E24B0047E15D /* HeaderFbAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13FC6EAC1C83E24B0047E15D /* HeaderFbAd.xib */; };
 		13FC6EAF1C83F2D10047E15D /* FbAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FC6EAE1C83F2D10047E15D /* FbAdCell.swift */; };
@@ -68,11 +75,20 @@
 /* Begin PBXFileReference section */
 		13007E2A1C896F9A003F6943 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		1345B1861C87D40500F448DB /* AdHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdHomeCell.swift; sourceTree = "<group>"; };
+		136ED0041C8D62E8001EFD51 /* GBKUIButtonAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBKUIButtonAnimations.h; sourceTree = "<group>"; };
+		136ED0051C8D62E8001EFD51 /* GBKUIButtonAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBKUIButtonAnimations.m; sourceTree = "<group>"; };
+		136ED0061C8D62E8001EFD51 /* GBKUIButtonProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBKUIButtonProgressView.h; sourceTree = "<group>"; };
+		136ED0071C8D62E8001EFD51 /* GBKUIButtonProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBKUIButtonProgressView.m; sourceTree = "<group>"; };
+		136ED0081C8D62E8001EFD51 /* GBKUIButtonProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBKUIButtonProgressView.xib; sourceTree = "<group>"; };
+		136ED0091C8D62E8001EFD51 /* ic_control_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_control_stop.png; sourceTree = "<group>"; };
+		136ED00A1C8D62E8001EFD51 /* ic_control_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_control_stop@2x.png"; sourceTree = "<group>"; };
+		136ED00B1C8D62E8001EFD51 /* ic_control_stop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_control_stop@3x.png"; sourceTree = "<group>"; };
 		13851B931C7EA80800CEE0CF /* some_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = some_image.jpg; sourceTree = "<group>"; };
 		1387C04544DF704375B822D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A364B71C7FE5BE00DBB1E3 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		13A364BB1C7FE60E00DBB1E3 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		13A364BC1C8031DE00DBB1E3 /* AdManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManage.swift; sourceTree = "<group>"; };
+		13D8E9CF1C8A90C400D2E727 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		13FC6EAA1C83E1BE0047E15D /* HeaderFbAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderFbAd.swift; sourceTree = "<group>"; };
 		13FC6EAC1C83E24B0047E15D /* HeaderFbAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderFbAd.xib; sourceTree = "<group>"; };
 		13FC6EAE1C83F2D10047E15D /* FbAdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbAdCell.swift; sourceTree = "<group>"; };
@@ -141,6 +157,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		136ED0031C8D62E8001EFD51 /* DownloadButton */ = {
+			isa = PBXGroup;
+			children = (
+				136ED0041C8D62E8001EFD51 /* GBKUIButtonAnimations.h */,
+				136ED0051C8D62E8001EFD51 /* GBKUIButtonAnimations.m */,
+				136ED0061C8D62E8001EFD51 /* GBKUIButtonProgressView.h */,
+				136ED0071C8D62E8001EFD51 /* GBKUIButtonProgressView.m */,
+				136ED0081C8D62E8001EFD51 /* GBKUIButtonProgressView.xib */,
+				136ED0091C8D62E8001EFD51 /* ic_control_stop.png */,
+				136ED00A1C8D62E8001EFD51 /* ic_control_stop@2x.png */,
+				136ED00B1C8D62E8001EFD51 /* ic_control_stop@3x.png */,
+			);
+			path = DownloadButton;
+			sourceTree = "<group>";
+		};
 		23FEB4A105BA4A674BC5ADD7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +214,7 @@
 		4C13DB9F1C5226120021613E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				136ED0031C8D62E8001EFD51 /* DownloadButton */,
 				4C13DBA01C522A470021613E /* NSDate+Formatter.swift */,
 				4C0CAEAD1C62208900ACFFD5 /* String2Html.swift */,
 				4C3FEBD11C5A298800C1C9A9 /* imageColor.swift */,
@@ -248,6 +280,7 @@
 			children = (
 				4CC4ED511C4F276A00506F13 /* AppDelegate.swift */,
 				13007E2A1C896F9A003F6943 /* Reach.swift */,
+				13D8E9CF1C8A90C400D2E727 /* SCLAlertView.swift */,
 				4C13DB9E1C5226020021613E /* Model */,
 				4C13DB9D1C5225F00021613E /* Home */,
 				4C34F72E1C5747B7004D4D4C /* Detail */,
@@ -390,13 +423,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CFB8C411C62EE6400D6EC80 /* ControlView.xib in Resources */,
+				136ED0111C8D62E8001EFD51 /* ic_control_stop@3x.png in Resources */,
 				4C47B6C71C733B3A0008FB18 /* some_image.jpg in Resources */,
 				4CBBE5CD1C72D794001810A1 /* reader.html in Resources */,
 				4CC4ED5C1C4F276A00506F13 /* LaunchScreen.storyboard in Resources */,
+				136ED00E1C8D62E8001EFD51 /* GBKUIButtonProgressView.xib in Resources */,
+				136ED00F1C8D62E8001EFD51 /* ic_control_stop.png in Resources */,
 				4CC4ED591C4F276A00506F13 /* Assets.xcassets in Resources */,
 				13FC6EAD1C83E24B0047E15D /* HeaderFbAd.xib in Resources */,
 				13851B941C7EA80800CEE0CF /* some_image.jpg in Resources */,
 				4CC4ED571C4F276A00506F13 /* Main.storyboard in Resources */,
+				136ED0101C8D62E8001EFD51 /* ic_control_stop@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,18 +510,21 @@
 				1345B1871C87D40500F448DB /* AdHomeCell.swift in Sources */,
 				4C34F7301C5769C3004D4D4C /* DetailCell.swift in Sources */,
 				13FC6EAF1C83F2D10047E15D /* FbAdCell.swift in Sources */,
+				136ED00C1C8D62E8001EFD51 /* GBKUIButtonAnimations.m in Sources */,
 				4C7E9B631C5B669600A52676 /* UIViewControllerHelper.swift in Sources */,
 				4C1E2ECC1C50845F00FE8B5C /* Chapter.swift in Sources */,
 				4C3FEBD21C5A298800C1C9A9 /* imageColor.swift in Sources */,
 				4CD68C0E1C59B48C00413988 /* ChapterCell.swift in Sources */,
 				4C3FEBD01C5A258800C1C9A9 /* Tabbar.swift in Sources */,
 				13007E2B1C896F9A003F6943 /* Reach.swift in Sources */,
+				13D8E9D01C8A90C400D2E727 /* SCLAlertView.swift in Sources */,
 				4C73871B1C607B540083F105 /* ReaderViewController.swift in Sources */,
 				4CC2E88D1C561769007AC7D8 /* RealmTransform.swift in Sources */,
 				4CC4ED821C4F2F4200506F13 /* HomeCell.swift in Sources */,
 				4C13DBA31C522A470021613E /* NSDate+Formatter.swift in Sources */,
 				4C13DBA41C522A470021613E /* UIButton+Border.swift in Sources */,
 				4CC4ED801C4F2CBC00506F13 /* HomeViewController.swift in Sources */,
+				136ED00D1C8D62E8001EFD51 /* GBKUIButtonProgressView.m in Sources */,
 				13FC6EAB1C83E1BE0047E15D /* HeaderFbAd.swift in Sources */,
 				13A364BD1C8031DF00DBB1E3 /* AdManage.swift in Sources */,
 				4C0CAEAE1C62208900ACFFD5 /* String2Html.swift in Sources */,

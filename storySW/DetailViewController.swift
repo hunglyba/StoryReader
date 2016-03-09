@@ -19,7 +19,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var story:Story = Story()
     var full = false
-    var chapters = [Chapter]()
+    var chapters = NSMutableArray()
     var numberOfButton = 0
     var headerFbAd = HeaderFbAd()
     var haveAd = false
@@ -27,9 +27,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     
     
-    override func viewWillAppear(animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
-    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.hidenTabbar()
@@ -45,14 +43,57 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
         Chapter.getList(story.sourceID) { (result) -> Void in
-            self.chapters = result
+            
+            print("get list chaper of story \(result)")
+            
+            self.chapters.addObjectsFromArray(result)
             self.numberOfButton = self.chapters.count/kStepButton as Int
             self.tableView.reloadData()
         }
         
         self.getNativeAd()
+        
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.getLocalChapterFromStory()
 
+    }
+    
+    func getLocalChapterFromStory()
+    {
+        print("id book \(self.story)")
+        
+        let storySourceID =  String  (self.story.sourceID)
+        
+        let predicate = NSPredicate(format: "story_id = %@",storySourceID)
+
+        let array = try! Realm().objects(Chapter).filter(predicate).sorted("chapter",ascending: true)
+        
+//        print("local chapter detail \(array)")
+        
+        
+        for (_, element) in array.enumerate() {
+            
+            let chapter: Chapter = element
+            self.chapters.addObject(chapter)
+            
+        }
+
+        
+        self.numberOfButton = self.chapters.count/kStepButton as Int
+        self.tableView.reloadData()
+        
+
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -134,6 +175,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
     }
     
+    
+    // MARK: - Table view data source
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2;
     }
@@ -187,7 +230,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let cell:DetailCell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! DetailCell
             
             cell.moreButton.addTarget(self, action: "showMore", forControlEvents: .TouchUpInside)
-            cell.downloadButton.addTarget(self,action:"downLoad",forControlEvents:.TouchUpInside)
+          
+            cell.downloadButton.font = UIFont.systemFontOfSize(8)
+
+            cell.downloadButton.initialTitle = "Download"
+            
             
             cell.selectionStyle = .None
             cell.dataDetailCell(self.story, full: self.full)
@@ -214,12 +261,12 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 if indexPath.row > 7 && self.haveAd
                 {
-                    cellData = self.chapters[indexPath.row - 1]
+                    cellData = self.chapters[indexPath.row - 1] as! Chapter
 
                 }
                 else
                 {
-                    cellData = self.chapters[indexPath.row]
+                    cellData = self.chapters[indexPath.row] as! Chapter
 
                 }
                 
@@ -275,11 +322,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let chapter: Chapter
         if (self.haveAd && indexPath.row > 7)
         {
-           chapter = self.chapters[indexPath.row - 1]
+           chapter = self.chapters[indexPath.row - 1] as! Chapter
         }
         else
         {
-             chapter = self.chapters[indexPath.row]
+             chapter = self.chapters[indexPath.row] as! Chapter
         }
         
 //        print("chapter dis select \(chapter)")
