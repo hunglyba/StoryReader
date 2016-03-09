@@ -44,7 +44,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         Chapter.getList(story.sourceID) { (result) -> Void in
             
-            print("get list chaper of story \(result)")
+//            print("get list chaper of story \(result)")
             
             self.chapters.addObjectsFromArray(result)
             self.numberOfButton = self.chapters.count/kStepButton as Int
@@ -332,13 +332,24 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //        print("chapter dis select \(chapter)")
         
 
-        let detailVC: ReaderViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("readerVC") as! ReaderViewController
+//        let detailVC: ReaderViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("readerVC") as! ReaderViewController
+//        
+//        detailVC.chapter = chapter
+//        self.presentViewController(detailVC, animated: true) { () -> Void in
+//            UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .None)
+//            UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: true)
+//        }
         
-        detailVC.chapter = chapter
-        self.presentViewController(detailVC, animated: true) { () -> Void in
-            UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .None)
-            UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: true)
-        }
+        
+        let textDetailView: ReaderTextView = self.storyboard?.instantiateViewControllerWithIdentifier("ReaderTextView" ) as! ReaderTextView
+        
+        textDetailView.chapter = chapter
+        
+        self.navigationController?.pushViewController(textDetailView, animated:true)
+        
+    
+    
+    
     }
     
 

@@ -23,6 +23,11 @@
 		13A364BA1C7FE5BF00DBB1E3 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A364B71C7FE5BE00DBB1E3 /* FBAudienceNetwork.framework */; };
 		13A364BD1C8031DF00DBB1E3 /* AdManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A364BC1C8031DE00DBB1E3 /* AdManage.swift */; };
 		13D8E9D01C8A90C400D2E727 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8E9CF1C8A90C400D2E727 /* SCLAlertView.swift */; };
+		13E774231C8FC219009D35B4 /* ReaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E774221C8FC219009D35B4 /* ReaderTextView.swift */; };
+		13E774891C901D86009D35B4 /* CTColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E774841C901D86009D35B4 /* CTColumnView.m */; };
+		13E7748A1C901D86009D35B4 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E774861C901D86009D35B4 /* CTView.m */; };
+		13E7748B1C901D86009D35B4 /* MarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E774881C901D86009D35B4 /* MarkupParser.m */; };
+		13E7748D1C901DE0009D35B4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E7748C1C901DE0009D35B4 /* CoreText.framework */; };
 		13FC6EAB1C83E1BE0047E15D /* HeaderFbAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FC6EAA1C83E1BE0047E15D /* HeaderFbAd.swift */; };
 		13FC6EAD1C83E24B0047E15D /* HeaderFbAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13FC6EAC1C83E24B0047E15D /* HeaderFbAd.xib */; };
 		13FC6EAF1C83F2D10047E15D /* FbAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FC6EAE1C83F2D10047E15D /* FbAdCell.swift */; };
@@ -36,7 +41,6 @@
 		4C34F7301C5769C3004D4D4C /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34F72F1C5769C3004D4D4C /* DetailCell.swift */; };
 		4C3FEBD01C5A258800C1C9A9 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FEBCF1C5A258800C1C9A9 /* Tabbar.swift */; };
 		4C3FEBD21C5A298800C1C9A9 /* imageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FEBD11C5A298800C1C9A9 /* imageColor.swift */; };
-		4C47B6C71C733B3A0008FB18 /* some_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B6C61C733B3A0008FB18 /* some_image.jpg */; };
 		4C73871B1C607B540083F105 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73871A1C607B540083F105 /* ReaderViewController.swift */; };
 		4C7E9B631C5B669600A52676 /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E9B621C5B669600A52676 /* UIViewControllerHelper.swift */; };
 		4CBBE5CD1C72D794001810A1 /* reader.html in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBE5CC1C72D794001810A1 /* reader.html */; };
@@ -89,6 +93,14 @@
 		13A364BB1C7FE60E00DBB1E3 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		13A364BC1C8031DE00DBB1E3 /* AdManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManage.swift; sourceTree = "<group>"; };
 		13D8E9CF1C8A90C400D2E727 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		13E774221C8FC219009D35B4 /* ReaderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderTextView.swift; sourceTree = "<group>"; };
+		13E774831C901D86009D35B4 /* CTColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTColumnView.h; sourceTree = "<group>"; };
+		13E774841C901D86009D35B4 /* CTColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTColumnView.m; sourceTree = "<group>"; };
+		13E774851C901D86009D35B4 /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
+		13E774861C901D86009D35B4 /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
+		13E774871C901D86009D35B4 /* MarkupParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkupParser.h; sourceTree = "<group>"; };
+		13E774881C901D86009D35B4 /* MarkupParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkupParser.m; sourceTree = "<group>"; };
+		13E7748C1C901DE0009D35B4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		13FC6EAA1C83E1BE0047E15D /* HeaderFbAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderFbAd.swift; sourceTree = "<group>"; };
 		13FC6EAC1C83E24B0047E15D /* HeaderFbAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderFbAd.xib; sourceTree = "<group>"; };
 		13FC6EAE1C83F2D10047E15D /* FbAdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbAdCell.swift; sourceTree = "<group>"; };
@@ -103,7 +115,6 @@
 		4C34F72F1C5769C3004D4D4C /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		4C3FEBCF1C5A258800C1C9A9 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		4C3FEBD11C5A298800C1C9A9 /* imageColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = imageColor.swift; path = Extension/imageColor.swift; sourceTree = "<group>"; };
-		4C47B6C61C733B3A0008FB18 /* some_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = some_image.jpg; sourceTree = "<group>"; };
 		4C73871A1C607B540083F105 /* ReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
 		4C7E9B621C5B669600A52676 /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerHelper.swift; path = Extension/UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		4CBBE5CC1C72D794001810A1 /* reader.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = reader.html; sourceTree = "<group>"; };
@@ -133,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E7748D1C901DE0009D35B4 /* CoreText.framework in Frameworks */,
 				7CE9433B06217544418D9472 /* Pods.framework in Frameworks */,
 				13A364B81C7FE5BF00DBB1E3 /* FBAudienceNetwork.framework in Frameworks */,
 			);
@@ -172,6 +184,19 @@
 			path = DownloadButton;
 			sourceTree = "<group>";
 		};
+		13E774821C901D86009D35B4 /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				13E774831C901D86009D35B4 /* CTColumnView.h */,
+				13E774841C901D86009D35B4 /* CTColumnView.m */,
+				13E774851C901D86009D35B4 /* CTView.h */,
+				13E774861C901D86009D35B4 /* CTView.m */,
+				13E774871C901D86009D35B4 /* MarkupParser.h */,
+				13E774881C901D86009D35B4 /* MarkupParser.m */,
+			);
+			path = CoreText;
+			sourceTree = "<group>";
+		};
 		23FEB4A105BA4A674BC5ADD7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +209,7 @@
 		3392F5B2D1173C0F5F889A5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13E7748C1C901DE0009D35B4 /* CoreText.framework */,
 				13A364B71C7FE5BE00DBB1E3 /* FBAudienceNetwork.framework */,
 				1387C04544DF704375B822D2 /* Pods.framework */,
 			);
@@ -214,6 +240,7 @@
 		4C13DB9F1C5226120021613E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				13E774821C901D86009D35B4 /* CoreText */,
 				136ED0031C8D62E8001EFD51 /* DownloadButton */,
 				4C13DBA01C522A470021613E /* NSDate+Formatter.swift */,
 				4C0CAEAD1C62208900ACFFD5 /* String2Html.swift */,
@@ -244,10 +271,10 @@
 			isa = PBXGroup;
 			children = (
 				4C73871A1C607B540083F105 /* ReaderViewController.swift */,
+				13E774221C8FC219009D35B4 /* ReaderTextView.swift */,
 				4CFB8C3E1C62EE5100D6EC80 /* ControlView.swift */,
 				4CFB8C401C62EE6400D6EC80 /* ControlView.xib */,
 				4CBBE5CC1C72D794001810A1 /* reader.html */,
-				4C47B6C61C733B3A0008FB18 /* some_image.jpg */,
 				13851B931C7EA80800CEE0CF /* some_image.jpg */,
 			);
 			name = Reader;
@@ -424,7 +451,6 @@
 			files = (
 				4CFB8C411C62EE6400D6EC80 /* ControlView.xib in Resources */,
 				136ED0111C8D62E8001EFD51 /* ic_control_stop@3x.png in Resources */,
-				4C47B6C71C733B3A0008FB18 /* some_image.jpg in Resources */,
 				4CBBE5CD1C72D794001810A1 /* reader.html in Resources */,
 				4CC4ED5C1C4F276A00506F13 /* LaunchScreen.storyboard in Resources */,
 				136ED00E1C8D62E8001EFD51 /* GBKUIButtonProgressView.xib in Resources */,
@@ -510,11 +536,13 @@
 				1345B1871C87D40500F448DB /* AdHomeCell.swift in Sources */,
 				4C34F7301C5769C3004D4D4C /* DetailCell.swift in Sources */,
 				13FC6EAF1C83F2D10047E15D /* FbAdCell.swift in Sources */,
+				13E7748A1C901D86009D35B4 /* CTView.m in Sources */,
 				136ED00C1C8D62E8001EFD51 /* GBKUIButtonAnimations.m in Sources */,
 				4C7E9B631C5B669600A52676 /* UIViewControllerHelper.swift in Sources */,
 				4C1E2ECC1C50845F00FE8B5C /* Chapter.swift in Sources */,
 				4C3FEBD21C5A298800C1C9A9 /* imageColor.swift in Sources */,
 				4CD68C0E1C59B48C00413988 /* ChapterCell.swift in Sources */,
+				13E774891C901D86009D35B4 /* CTColumnView.m in Sources */,
 				4C3FEBD01C5A258800C1C9A9 /* Tabbar.swift in Sources */,
 				13007E2B1C896F9A003F6943 /* Reach.swift in Sources */,
 				13D8E9D01C8A90C400D2E727 /* SCLAlertView.swift in Sources */,
@@ -522,7 +550,9 @@
 				4CC2E88D1C561769007AC7D8 /* RealmTransform.swift in Sources */,
 				4CC4ED821C4F2F4200506F13 /* HomeCell.swift in Sources */,
 				4C13DBA31C522A470021613E /* NSDate+Formatter.swift in Sources */,
+				13E7748B1C901D86009D35B4 /* MarkupParser.m in Sources */,
 				4C13DBA41C522A470021613E /* UIButton+Border.swift in Sources */,
+				13E774231C8FC219009D35B4 /* ReaderTextView.swift in Sources */,
 				4CC4ED801C4F2CBC00506F13 /* HomeViewController.swift in Sources */,
 				136ED00D1C8D62E8001EFD51 /* GBKUIButtonProgressView.m in Sources */,
 				13FC6EAB1C83E1BE0047E15D /* HeaderFbAd.swift in Sources */,

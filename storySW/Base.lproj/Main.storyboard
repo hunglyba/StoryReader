@@ -576,6 +576,34 @@ Vì thủ hộ mảnh đất cuối cùng của nhân loại, võ giả triển 
             </objects>
             <point key="canvasLocation" x="2597" y="369"/>
         </scene>
+        <!--Reader Text View-->
+        <scene sceneID="Fpa-cW-muj">
+            <objects>
+                <viewController storyboardIdentifier="ReaderTextView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rec-UQ-BSF" customClass="ReaderTextView" customModule="storySW" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2QG-eY-941"/>
+                        <viewControllerLayoutGuide type="bottom" id="s4N-au-uaP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="77Y-Qi-NCd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6F-yn-jTE" customClass="CTView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="coreTextView" destination="e6F-yn-jTE" id="Rxp-D4-X8u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7e-Fs-SI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2683" y="1039"/>
+        </scene>
         <!--Reader View Controller-->
         <scene sceneID="dbf-r2-PaS">
             <objects>
