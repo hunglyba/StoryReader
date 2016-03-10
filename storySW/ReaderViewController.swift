@@ -62,9 +62,9 @@ class ReaderViewController: UIViewController, ControlDelegate, UIGestureRecogniz
     }
     
     func htmlText() {
-        var HTML = NSBundle.mainBundle().URLForResource("reader", withExtension: "html")
-        let myRequest = NSURLRequest(URL: HTML!);
-        self.webView.loadRequest(myRequest)
+//        var HTML = NSBundle.mainBundle().URLForResource("reader", withExtension: "html")
+//        let myRequest = NSURLRequest(URL: HTML!);
+//        self.webView.loadRequest(myRequest)
 //
 //        let HTMLDocumentPath = NSBundle.mainBundle().pathForResource("reader", ofType: "html")
 //        let HTMLString: NSString?
